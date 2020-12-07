@@ -1,6 +1,8 @@
 # README.md for ChessAI
 
-**Introduction**
+To execute the code go to either `test_chess.py` or `gui_chess.py` and uncomment players and corresponding algorithms you would like. Make sure you have selected one `player1` and one `player2`. 
+
+For `MinimaxAI`, `AlphaBetaAI`, and `IterativeDeepeningMinimaxAI` you can select the max depth you would like the algorithms to traverse each iteration by changing the first argument in the object constructor. The second boolean corresponds to if the player is white or black with `True` corresponding to white and `False` corresponding to black.
 
 This this chess ai implements the standard minimax algorithm, a version that utilized alpha-beta pruning, and a version that utilized iterative deepening to create an actor to play the given chess model using the `python-chess` library from <https://python-chess.readthedocs.io/en/latest/core.html>.
 
@@ -13,7 +15,3 @@ I also added checking that the current move was not the reverse of the previous 
 *Iterative Deepening Minimax:* Iterative deepening minimax is exactly like minimax, except instead of recusing to the given max depth, iterative deepening minimax calculates a best move at each depth with better moves coming at later depths. The utility is for not having the time to traverse to the max depth, with iterative deepening there will always be a move available and better moves become available as time goes on.  
 
 *Evaluation Function:* For the evaluation function, I implemented the suggested material evaluation heuristic which values pieces based on as point system. Pawns are worth 1 point, bishops and knights 3 points, rooks 5 points, queen's 9 points. I valued the king at 100 points as capturing it is the goal. The players points were added to the score total by looping over every square of the board while the opponents points were subtracted from the total with the goal of maximizing the player's point total. Initial states of the game started at 0 while successive moves that captured opponents' pieces increased the score and losing pieces decreased the score.    
-
-To execute the code go to either `test_chess.py` or `gui_chess.py` and uncomment players and corresponding algorithms you would like. Make sure you have selected one `player1` and one `player2`. 
-
-For `MinimaxAI`, `AlphaBetaAI`, and `IterativeDeepeningMinimaxAI` you can select the max depth you would like the algorithms to traverse each iteration by changing the first argument in the object constructor. The second boolean corresponds to if the player is white or black with `True` corresponding to white and `False` corresponding to black. 
