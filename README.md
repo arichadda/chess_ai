@@ -1,6 +1,4 @@
-# README.md 
-### Chess AI
---
+# README.md for ChessAI
 
 **Introduction**
 
